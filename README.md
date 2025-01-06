@@ -18,159 +18,53 @@ This project contains 3 flavors:
 - staging
 - production
 
-To run the desired flavor either use the launch configuration in VSCode/Android Studio or use the following commands:
+## Table of Contents
 
-```sh
-# Development
-$ flutter run --flavor development --target lib/main_development.dart
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Folder Structure](#folder-structure)
+- [Contributing](#contributing)
+- [License](#license)
 
-# Staging
-$ flutter run --flavor staging --target lib/main_staging.dart
+## Introduction
 
-# Production
-$ flutter run --flavor production --target lib/main_production.dart
-```
+The Sports Vendor App is a Flutter application designed to manage sports vendors, locations, and sports activities. It provides a user-friendly interface to view and manage sports-related data.
 
-_\*Sports Vendor App works on iOS, Android, Web, and Windows._
+## Features
 
----
+- View a list of sports locations
+- View details of each location
+- View a list of sports activities
+- View details of each sport
+- View a list of vendors
+- View details of each vendor
 
-## Running Tests 🧪
+## Installation
 
-To run all unit and widget tests use the following command:
+To get started with the Sports Vendor App, follow these steps:
 
-```sh
-$ flutter test --coverage --test-randomize-ordering-seed random
-```
+1. **Clone the repository:**
 
-To view the generated coverage report you can use [lcov](https://github.com/linux-test-project/lcov).
+   ```sh
+   git clone https://github.com/Laxmikant2002/sports_vendor_app.git
+   cd sports_vendor_app
+   ```
+2. Install dependencies:
+    ```sh
+    flutter pub get
+    ```
+3. Run the app:
 
-```sh
-# Generate Coverage Report
-$ genhtml coverage/lcov.info -o coverage/
+    For Android, iOS, or desktop:
+    ```sh
+    flutter run
+    ```
+    For web:
+    ```sh
+    flutter run -d chrome
+    ```
+## Usage
 
-# Open Coverage Report
-$ open coverage/index.html
-```
-
----
-
-## Working with Translations 🌐
-
-This project relies on [flutter_localizations][flutter_localizations_link] and follows the [official internationalization guide for Flutter][internationalization_link].
-
-### Adding Strings
-
-1. To add a new localizable string, open the `app_en.arb` file at `lib/l10n/arb/app_en.arb`.
-
-```arb
-{
-    "@@locale": "en",
-    "counterAppBarTitle": "Counter",
-    "@counterAppBarTitle": {
-        "description": "Text shown in the AppBar of the Counter Page"
-    }
-}
-```
-
-2. Then add a new key/value and description
-
-```arb
-{
-    "@@locale": "en",
-    "counterAppBarTitle": "Counter",
-    "@counterAppBarTitle": {
-        "description": "Text shown in the AppBar of the Counter Page"
-    },
-    "helloWorld": "Hello World",
-    "@helloWorld": {
-        "description": "Hello World Text"
-    }
-}
-```
-
-3. Use the new string
-
-```dart
-import 'package:sports_vendor_app/l10n/l10n.dart';
-
-@override
-Widget build(BuildContext context) {
-  final l10n = context.l10n;
-  return Text(l10n.helloWorld);
-}
-```
-
-### Adding Supported Locales
-
-Update the `CFBundleLocalizations` array in the `Info.plist` at `ios/Runner/Info.plist` to include the new locale.
-
-```xml
-    ...
-
-    <key>CFBundleLocalizations</key>
-	<array>
-		<string>en</string>
-		<string>es</string>
-	</array>
-
-    ...
-```
-
-### Adding Translations
-
-1. For each supported locale, add a new ARB file in `lib/l10n/arb`.
-
-```
-├── l10n
-│   ├── arb
-│   │   ├── app_en.arb
-│   │   └── app_es.arb
-```
-
-2. Add the translated strings to each `.arb` file:
-
-`app_en.arb`
-
-```arb
-{
-    "@@locale": "en",
-    "counterAppBarTitle": "Counter",
-    "@counterAppBarTitle": {
-        "description": "Text shown in the AppBar of the Counter Page"
-    }
-}
-```
-
-`app_es.arb`
-
-```arb
-{
-    "@@locale": "es",
-    "counterAppBarTitle": "Contador",
-    "@counterAppBarTitle": {
-        "description": "Texto mostrado en la AppBar de la página del contador"
-    }
-}
-```
-
-### Generating Translations
-
-To use the latest translations changes, you will need to generate them:
-
-1. Generate localizations for the current project:
-
-```sh
-flutter gen-l10n --arb-dir="lib/l10n/arb"
-```
-
-Alternatively, run `flutter run` and code generation will take place automatically.
-
-[coverage_badge]: coverage_badge.svg
-[flutter_localizations_link]: https://api.flutter.dev/flutter/flutter_localizations/flutter_localizations-library.html
-[internationalization_link]: https://flutter.dev/docs/development/accessibility-and-localization/internationalization
-[license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
-[license_link]: https://opensource.org/licenses/MIT
-[very_good_analysis_badge]: https://img.shields.io/badge/style-very_good_analysis-B22C89.svg
-[very_good_analysis_link]: https://pub.dev/packages/very_good_analysis
-[very_good_cli_link]: https://github.com/VeryGoodOpenSource/very_good_cli
+    Once the app is running, you can navigate through the different screens to view and manage sports locations, sports activities, and vendors.
