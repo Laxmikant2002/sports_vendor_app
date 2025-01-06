@@ -1,0 +1,5 @@
+[
+    {"name": "Vendor 1", "rating": 4.5, "price": 100},
+    {"name": "Vendor 2", "rating": 4.0, "price": 150},
+    {"name": "Vendor 3", "rating": 3.5, "price": 200}
+  ]

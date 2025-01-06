@@ -1,0 +1,6 @@
+[
+    {"name": "Banana Ride", "description": "Information about banana ripeness."},
+    {"name": "Speed Boat", "description": "Details about a specific speed boat model."},
+    {"name": "Snorkeling", "description": "Information about snorkeling activities."},
+    {"name": "Scuba", "description": "Information about scuba diving."}
+  ]
