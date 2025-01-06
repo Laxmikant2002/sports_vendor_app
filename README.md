@@ -59,4 +59,4 @@ To get started with the Sports Vendor App, follow these steps:
     ```
 ## Usage
 
-    Once the app is running, you can navigate through the different screens to view and manage sports locations, sports activities, and vendors.
+   Once the app is running, you can navigate through the different screens to view and manage sports locations, sports activities, and vendors.
